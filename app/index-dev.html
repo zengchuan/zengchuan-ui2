@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>zengchuan ui2</title>
+    <base href="/">
+
+    <!-- build:css(.tmp) styles/main.min.css -->
+    <!-- TODO: (martin) the bootstrap.css & font awesome should be load in vendor.js but how I make sure that vendor css files are loaded before main.css as vendor css files are load through JS -->
+    <link rel="stylesheet" href="../jspm_packages/github/twbs/bootstrap@3.3.6/css/bootstrap.css"/>
+    <link rel="stylesheet" href="../jspm_packages/github/twbs/bootstrap@3.3.6/css/bootstrap-theme.css"/>
+    <link rel="stylesheet" href="../jspm_packages/npm/font-awesome@4.5.0/css/font-awesome.css"/>
+
+    <link rel="stylesheet" href="../styles/zc.css" type="text/css"/>
+    <!-- endbuild -->
+
+
+  </head>
+
+  <body>
+    <zc-app>Loading...</zc-app>
+  </body>
+
+  <!-- build:js(.) scripts/main.min.js -->
+  <!-- inject:build:js -->
+  <!-- endinject -->
+  <!-- endbuild -->
+
+  <!--removeIf(production)-->
+  <script src="jspm_packages/system.js"></script>
+  <script src="jspm.conf.js"></script>
+  <script>
+    System.import('zc/core/boot/zc-bootstrap-dev')
+            .then(null, console.error.bind(console));
+  </script>
+  <!--endRemoveIf(production)-->
+</html>

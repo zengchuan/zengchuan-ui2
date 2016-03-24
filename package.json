@@ -1,0 +1,83 @@
+{
+  "name": "zengchuan-ui2",
+  "version": "0.0.1",
+  "description": "Angular 2 app with Typescript, JSPM and Gulp",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zengchuan/zengchuan-ui2"
+  },
+  "author": {
+    "name": "Zeng chuan",
+    "url": "https://zengchuan.github.io"
+  },
+  "keywords": [
+    "Angular 2",
+    "TypeScript",
+    "JSPM",
+    "Gulp"
+  ],
+  "dependencies": {},
+  "scripts": {},
+  "devDependencies": {
+    "browser-sync": "^2.11.1",
+    "connect-modrewrite": "^0.8.5",
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-bytediff": "^1.0.0",
+    "gulp-cached": "^1.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-css-globbing": "^0.1.8",
+    "gulp-filter": "^4.0.0",
+    "gulp-flatten": "^0.2.0",
+    "gulp-header": "^1.7.1",
+    "gulp-htmlhint": "^0.3.1",
+    "gulp-inject": "^3.0.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-minify-html": "^1.0.6",
+    "gulp-rename": "^1.2.2",
+    "gulp-rev": "^7.0.0",
+    "gulp-sass": "^2.2.0",
+    "gulp-size": "^2.1.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-tslint": "^4.3.3",
+    "gulp-typescript": "^2.12.1",
+    "gulp-uglify": "^1.5.3",
+    "gulp-usemin": "^0.3.21",
+    "jspm": "^0.16.30",
+    "moment": "^2.12.0",
+    "require-dir": "^0.3.0",
+    "run-sequence": "^1.1.5",
+    "systemjs-builder": "^0.15.12",
+    "tslint": "^3.5.0",
+    "typescript": "^1.8.7"
+  },
+  "jspm": {
+    "directories": {
+      "lib": "app"
+    },
+    "configFile": "jspm.conf.js",
+    "dependencies": {
+      "angular2": "npm:angular2@^2.0.0-beta.11",
+      "angular2-modal": "npm:angular2-modal@^0.0.4",
+      "bootstrap": "github:twbs/bootstrap@^3.3.6",
+      "es6-promise": "npm:es6-promise@^3.1.2",
+      "es6-shim": "github:es-shims/es6-shim@^0.35.0",
+      "es7-reflect-metadata": "npm:es7-reflect-metadata@^1.6.0",
+      "font-awesome": "npm:font-awesome@^4.5.0",
+      "json": "github:systemjs/plugin-json@^0.1.0",
+      "ng2-radio-group": "npm:ng2-radio-group@^0.0.2",
+      "ng2-translate": "npm:ng2-translate@^1.10.3",
+      "rxjs": "npm:rxjs@^5.0.0-beta.2",
+      "text": "github:systemjs/plugin-text@^0.0.7",
+      "zone.js": "npm:zone.js@0.6.4"
+    },
+    "devDependencies": {
+      "typescript": "npm:typescript@^1.8.9"
+    }
+  },
+  "engines": {
+    "node": ">=0.12.x",
+    "npm": ">=2.0.0"
+  }
+}

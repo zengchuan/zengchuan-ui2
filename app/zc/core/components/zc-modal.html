@@ -1,0 +1,27 @@
+<div class="modal-header" >
+    <a class="close" (click)="close($event)">×</a>
+    <h4>{{context.zcModalOptions.headerText}}</h4>
+</div>
+<div class="modal-body" >
+    <div *ngIf="!context.zcModalOptions.showPrompt">
+        <span class="zc-modal-type" [class]="context.zcModalOptions.iconClass"></span>
+        <span class="zc-modal-text">{{context.zcModalOptions.bodyText}}</span>
+    </div>
+    <div *ngIf="context.zcModalOptions.showPrompt">
+        <span class="col-md-3 col-lg-3" >{{context.zcModalOptions.promptText}}</span>
+        <span><input type="text" class="col-md-9 col-lg-9" id="zcModalPromptText" [(ngModel)]="context.zcModalOptions.promptData"></span>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-primary"   id="zcModalOkButton"
+            *ngIf="context.zcModalOptions.showConfirm"
+            (click)="ok($event);"
+            >
+        {{context.zcModalOptions.actionButtonText}}
+    </button>
+    <button type="button" class="btn" id="zcModalCloseButton"
+            (click)="close($event)"
+            >
+        {{context.zcModalOptions.closeButtonText}}
+    </button>
+</div>

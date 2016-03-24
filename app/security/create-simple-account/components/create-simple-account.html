@@ -1,0 +1,139 @@
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div zc-container>
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">{{'TXT_CREATE_SIMPLE_ACCOUNT_TITLE' | translate}}</a>
+        </div>
+    </div>
+</div>
+
+<div zc-container class="create-simple-account zc-body">
+    <div class="row">
+
+        <div class="col-md-7 col-lg-7" id="policies">
+            <div id="policiesHeader" class="detailHeader">
+                {{'TXT_CREATE_SIMPLE_ACCOUNT_POLICE' | translate}}
+            </div>
+
+            <div id="policiesDetail" class="policiesDetail">
+                <p [innerHTML]="'TXT_CREATE_SIMPLE_ACCOUNT_POLICE_DETAIL' | translate"></p>
+            </div>
+
+
+        </div>
+
+        <div class="col-md-5 col-lg-5" id="userInfo">
+            <div id="userInfoHeader" class="detailHeader">
+                {{'TXT_CREATE_SIMPLE_ACCOUNT_USER_INFO' | translate}}
+            </div>
+
+            <div id="userInfoDetail">
+
+                <form role="form">
+                    <div class="form-group">
+                        <label class="col-md-12 col-lg-12 control-label">
+                            <b class="zc-red-star">*</b>
+                            {{'TXT_CREATE_SIMPLE_ACCOUNT_USER_CODE' | translate}}
+                        </label>
+
+                        <div class="col-md-8 col-lg-8">
+                            <input type="text" class="form-control" id="userCode"
+                                   [(ngModel)]="createSimpleAccountVO.securityUser.userCode" placeholder="" autofocus="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12 col-lg-12 control-label">
+                            <b class="zc-red-star">*</b>
+                            {{'TXT_CREATE_SIMPLE_ACCOUNT_PASSWORD' | translate}}
+                        </label>
+
+                        <div class="col-md-8 col-lg-8">
+                            <input type="password" class="form-control" id="password"
+                                   [(ngModel)]="createSimpleAccountVO.password" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12 col-lg-12 control-label">
+                            <b class="zc-red-star">*</b>
+                            {{'TXT_CREATE_SIMPLE_ACCOUNT_PASSWORD_CONFIRM' | translate}}
+                        </label>
+
+                        <div class="col-md-8 col-lg-8">
+                            <input type="password" class="form-control" id="passwordConfirm"
+                                   [(ngModel)]="createSimpleAccountInfo.passwordConfirm" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12 col-lg-12 control-label">
+                            {{'TXT_CREATE_SIMPLE_ACCOUNT_USER_NAME' | translate}}
+                        </label>
+
+                        <div class="col-md-8 col-lg-8">
+                            <input type="text" class="form-control" id="userName"
+                                   [(ngModel)]="createSimpleAccountVO.securityUser.userName" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12 col-lg-12 control-label">
+                            {{'TXT_CREATE_SIMPLE_ACCOUNT_SEX' | translate}}
+                        </label>
+
+                        <div class="col-md-8 col-lg-8">
+                            <select class="form-control" [(ngModel)]="createSimpleAccountVO.securityUser.sex" >
+                                <option *ngFor="#o of commGenderList" [value]="o.id.code">{{o.name}}</option>
+                            </select>
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12 col-lg-12 control-label">
+                            {{'TXT_CREATE_SIMPLE_ACCOUNT_BIRTHDAY' | translate }}
+                        </label>
+
+                        <div class="col-md-8 col-lg-8">
+                            <input type="date" class="form-control" id="birthday"
+                                   [(ngModel)]="createSimpleAccountVO.securityUser.birthday">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12 col-lg-12 control-label">
+                            {{'TXT_CREATE_SIMPLE_ACCOUNT_MAIL' | translate}}
+                        </label>
+
+                        <div class="col-md-8 col-lg-8">
+                            <input type="email" class="form-control" id="mail"
+                                   [(ngModel)]="createSimpleAccountVO.securityUser.mail" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12 col-lg-12 control-label">
+                            {{'TXT_CREATE_SIMPLE_ACCOUNT_MOBILE' | translate}}
+                        </label>
+
+                        <div class="col-md-8 col-lg-8">
+                            <input type="text" class="form-control" id="mobile"
+                                   [(ngModel)]="createSimpleAccountVO.securityUser.mobile" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-12 col-lg-12 control-label">
+                            <input type="checkbox" id="isCheckPolicies"
+                                   [(ngModel)]="createSimpleAccountInfo.checked"
+                                   value="0">
+                            {{'TXT_CREATE_SIMPLE_ACCOUNT_AGGREE' | translate}}
+                        </label>
+
+                        <div class="col-md-8 col-lg-8">
+                            <button type="button" class="btn btn-primary" (click)="saveSimpleAccount()">
+                                {{'TXT_CREATE_SIMPLE_ACCOUNT_REGISTER' | translate}}
+                            </button>
+                        </div>
+                    </div>
+
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
